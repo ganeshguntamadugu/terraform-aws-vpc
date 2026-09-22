@@ -115,7 +115,7 @@ resource "aws_nat_gateway" "nat" {
   depends_on = [aws_internet_gateway.igw_main]
 }
 
-#Route Table Route and Association
+#Route Table, Route and Association
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
 
