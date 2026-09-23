@@ -9,3 +9,7 @@ output "igw_id" {
 # output "az_check" {
 #     value = data.aws_availability_zones.availability
 # }
+
+# output "filtering_vpc_info" {
+#     value = data.aws_vpc.filtering_vpc
+# }

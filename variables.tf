@@ -91,3 +91,12 @@ variable "private_route_table_tags" {
 variable "database_route_table_tags" {
     default = {}
 }
+
+variable "is_peering_required" {
+    type = bool
+    default = false
+}
+
+variable "peering_tags" { 
+    default = {}
+}
