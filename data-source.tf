@@ -8,3 +8,7 @@ data "aws_vpc" "filtering_vpc" {
     values = ["Default VPC"]
   }
 }
+
+data "aws_route_table" "main" {
+  vpc_id = data.aws_vpc.filtering_vpc.id
+}

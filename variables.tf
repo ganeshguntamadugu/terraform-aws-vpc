@@ -1,12 +1,26 @@
+#If module user should give values mandatorily we don't keep default in variables like below
+
 #VPC
 variable "vpc_cidr" {
-    default = "10.0.0.0/16"
+    
 }
 
 variable "dns_hostnames" {
     default = true
 }
 
+
+variable "project_name" {
+    type = string
+    #default = ""
+}
+
+variable "environment" {
+    type = string
+    
+}
+
+#Subnets
 variable "public_subnet_cidrs" {
     type = list
     validation {
@@ -29,17 +43,6 @@ variable "database_subnet_cidrs" {
         condition     = length(var.database_subnet_cidrs) == 2
         error_message = "Please provide 2 Database Subnet cidr"
     }
-}
-
-#If module user should give values mandatorily we don't keep default in variables like below
-variable "project_name" {
-    type = string
-    #default = ""
-}
-
-variable "environment" {
-    type = string
-    
 }
 
 #Optional
@@ -92,11 +95,12 @@ variable "database_route_table_tags" {
     default = {}
 }
 
+#Peering
 variable "is_peering_required" {
     type = bool
     default = false
 }
 
-variable "peering_tags" { 
+variable "vpc_peering_tags" { 
     default = {}
 }

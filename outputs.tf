@@ -6,10 +6,26 @@ output "igw_id" {
   value = aws_internet_gateway.igw_main.id
 }
 
+output "public_subnet_ids" {
+  value = aws_subnet.public[*].id
+}
+
+output "private_subnet_ids" {
+  value = aws_subnet.public[*].id
+}
+
+output "database_subnet_ids" {
+  value = aws_subnet.public[*].id
+}
+
 # output "az_check" {
 #     value = data.aws_availability_zones.availability
 # }
 
 # output "filtering_vpc_info" {
 #     value = data.aws_vpc.filtering_vpc
+# }
+
+# output "route_table_id" {
+#     value = data.aws_route_table.main 
 # }
