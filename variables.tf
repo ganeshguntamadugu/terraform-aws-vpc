@@ -105,12 +105,4 @@ variable "vpc_peering_tags" {
     default = {}
 }
 
-variable "parameter_store_required" {
-    type = bool
-    default = false
-}
-
-variable "parameter_tags" {
-    default = {}
-}
 

@@ -15,7 +15,6 @@
 * Route table associations with subnets
 * Peering with default VPC(if Required)
 * Peering routes in acceptor and requestor route tables
-* SSM Parameter (if Required)
 
 ## Inputs
 ### Mandatory Inputs
@@ -42,8 +41,6 @@
 * database_route_table_tags (Optional): Default is empty. User can supply tags in map(string) format.
 * is_peering_required (Optional): defaults to false
 * vpc_peering_tags (Optional): Default is empty. User can supply tags in map(string) format.
-* parameter_store_required (Optional): defaults to false
-* parameter_tags (Optional): Default is empty. User can supply tags in map(string) format.
 
 ## Outputs
 * vpc_id: VPC ID created
