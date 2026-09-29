@@ -73,12 +73,12 @@ resource "aws_subnet" "database" {
 
 # DB Subnet group for RDS
 resource "aws_db_subnet_group" "main" {
-  name       = local.resource_name
+  name       = "${local.resource_name}-db-group"
   subnet_ids = aws_subnet.database[*].id
 
   tags = merge(
     var.common_tags,
-    var.db_subnet_group,
+    var.db_subnet_group_tags,
     {
         Name = "${local.resource_name}-db-group"
     }
