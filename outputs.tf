@@ -18,6 +18,11 @@ output "database_subnet_ids" {
   value = aws_subnet.database[*].id
 }
 
+output "db_subnet_group" {
+  value = aws_db_subnet_group.main.name
+}
+
+
 # output "az_check" {
 #     value = data.aws_availability_zones.availability
 # }
